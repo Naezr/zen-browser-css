@@ -1,0 +1,101 @@
+/*------------------------------------
+ * toolbar on side
+ */
+
+#zen-appcontent-navbar-container{z-index: 4 !important; overflow: visible !important;}
+#zen-tabbox-wrapper{z-index: 1 !important;}
+
+#PersonalToolbar{  
+  /* make visible */
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
+  
+  /* hide not needed */
+  toolbartabstop{
+    display: none !important;
+  }
+  
+  /* vertical orientation */
+  display: flex !important;
+  flex-direction: column !important;
+  
+  /* size */
+  height: fit-content !important;
+  max-height: unset !important;
+  min-height: unset !important;
+  width: 42px !important;
+  
+  padding-inline: 0px !important;
+  padding-block: 2px 0 !important;
+  
+  /* buttons size */
+  & > *{
+    --_size: 40px !important;
+    max-height: var(--_size) !important;
+    max-width: var(--_size) !important;
+    min-height: var(--_size) !important;
+    min-width: var(--_size) !important;
+    margin: 0 !important;
+  }
+  
+  /* buttons icons size */
+  toolbarbutton > :is(.toolbarbutton-badge-stack, .toolbarbutton-icon){
+    margin: 2px !important;
+    padding: 8px !important;
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 10px !important;
+  }
+  
+  toolbaritem > toolbarbutton{
+    margin-inline: 4px !important;
+  }
+  
+  /* background */
+  background: color-mix(in srgb, var(--zen-colors-tertiary) 70%, transparent 30%) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid var(--arrowpanel-border-color) !important;
+  border-radius: var(--zen-border-radius) !important;
+
+  /* position */
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  
+  /* hide & show on hover */
+  transition: margin .5s ease !important;
+  margin-top: calc(var(--zen-element-separation) * 2) !important;
+  margin-right: -42px !important;
+  &:is( :hover, :has([open]) ){
+    margin-right: calc(var(--zen-element-separation) * 2) !important;
+  }
+  
+  /* hover hitbox */
+  overflow: visible !important;
+  &::after{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    z-index: -1;
+    margin-left: calc(-5px - var(--zen-element-separation));
+  }
+}
+
+/* customizing mode */
+:root[customizing]{
+  #PersonalToolbar{
+    margin: 5px !important;
+    height: calc(50vh - 10px) !important;
+    min-width: unset !important;
+    
+    border-radius: 15px !important;
+    background: transparent !important;
+  }
+  #zen-appcontent-wrapper{
+    margin-right: 50px !important;
+  }
+}

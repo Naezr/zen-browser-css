@@ -1,0 +1,172 @@
+/*------------------------------------
+ * findbar
+ */
+
+/* animation */
+@keyframes findbar-animation {
+  from {
+    top: -70px;
+    opacity: 0;
+  }
+
+  to {
+    top: var(--zen-element-separation);
+    opacity: 1;
+  }
+}
+
+findbar {
+  /* setup for animation */
+  &:is([hidden="true"]) {
+    visibility: inherit !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    top: -70px !important;
+  }
+  
+  animation: findbar-animation 0.2s ease;
+
+  transition: 
+    opacity 0.2s ease,
+    visibility 0.3s ease,
+    top 0.3s ease,
+    box-shadow 0.2s ease 
+  !important;
+    
+  /* base styles */
+  position: absolute;
+  flex-wrap: wrap;
+  opacity: 1;
+
+  /* position */
+  top: calc(var(--zen-element-separation) * .5 - 1px);
+  right: calc(var(--zen-element-separation) * .5 - 1px);
+  
+  width: min(560px, calc(100% - var(--zen-element-separation) + 2px));
+  min-height: 70px;
+  height: auto !important;
+  
+  /* background */
+  background: color-mix(in srgb, var(--zen-colors-tertiary) 70%, transparent 30%) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid var(--arrowpanel-border-color) !important;
+  border-radius: var(--zen-border-radius) !important;
+
+  &:has(.findbar-textbox:is([status="notfound"])) 
+  {background: light-dark(rgb(255, 146, 146), rgb(255, 100, 100)) !important;}
+  
+  /* integrated close button */
+  .findbar-closebutton{
+    position: absolute !important;
+    right: 10px;
+    top: 9px;
+  }
+  
+  [anonid="findbar-textbox-wrapper"]
+  {padding-right: 28px !important;}
+  
+  /* container */
+  .findbar-container {
+    margin-inline: 10px !important;
+    margin-bottom: 5px !important;
+    flex-wrap: wrap;
+    height: auto !important;
+    row-gap: 10px;
+  }
+  
+  /* search container */
+  [anonid="findbar-textbox-wrapper"] {
+    width: 100% !important;
+    margin-top: 5px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
+    
+    /* icon */
+    &::before {
+      content: "";
+      width: 16px !important;
+      min-width: 16px !important;
+      background-image: url(chrome://global/skin/icons/search-glass.svg) !important;
+      background-repeat: no-repeat;
+      margin-top: 4px;
+      margin-right: 15px;
+      margin-left: 5px;
+
+      @media (prefers-color-scheme: dark) {filter: invert();}
+    }
+    
+    /* clean textbox */
+    .findbar-textbox {
+      background: none !important;
+      padding: 0 !important;
+      font-size: 16px !important;
+      box-shadow: none !important;
+      width: 100% !important;
+      border: none !important;
+    }
+  }
+  
+  /* some margins */
+  toolbarbutton {
+    width: 24px !important;
+    justify-content: space-between !important;
+    padding: 4px !important;
+    margin-left: 4px !important;
+    margin-right: 0 !important;
+  }
+  
+  checkbox, label, description {
+    margin-left: 4px !important;
+    margin-right: 6px !important;
+  }
+  
+  .checkbox-label {font-size: 12.5px !important;}
+  
+  /* all labels */
+  .findbar-label {
+    display: flex;
+    flex-basis: 100%;
+    
+    font-size: 14px !important;
+    margin-top: 10px !important;
+
+    &:is([hidden="true"]) {display: none;}
+  }
+
+  /* found label */
+  .found-matches:not([hidden])::before {
+    background-image: url('chrome://browser/skin/zen-icons/search-page.svg') !important;
+    background-repeat: no-repeat !important;
+    padding-left: 25px !important;
+    color: black !important;
+
+    @media (prefers-color-scheme: dark) {filter: invert();}
+  }
+  
+  /* status label */
+  .findbar-find-status {
+    display: none;
+    &:is([data-l10n-id]) {display: flex;}
+  }
+  
+  /* not found label */
+  .findbar-label[status="notfound"] {
+    margin-left: 4px !important;
+    margin-top: 10px !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    flex-basis: 100% !important;
+
+    /* icon */
+    &::before {
+      content: "";
+      min-width: 17px !important;
+      min-height: 17px !important;
+      background-image: url(chrome://global/skin/icons/close.svg) !important;
+      margin-right: 8px !important;
+
+      @media (prefers-color-scheme: dark) {filter: invert();}
+    }
+  }
+
+}

@@ -108,6 +108,7 @@
   &:is( :hover, :has([open]) )::before{opacity: 0;}
   &::before{
     content: '';
+    opacity: .5;
     top: 0;
     position: absolute;
     padding-left: 0px;

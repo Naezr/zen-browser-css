@@ -1,0 +1,21 @@
+/*------------------------------------
+ * floating urlbar 
+ */
+#urlbar[zen-floating-urlbar="true"][breakout][breakout-extend] {
+  
+  /* background */
+  #urlbar-background{
+    background: color-mix(in srgb, var(--zen-colors-tertiary) 70%, transparent 30%) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 20px !important;
+  }
+  
+  /* larger input box */
+  #urlbar-input{
+    font-size: 25px !important;
+  }
+  #identity-box[pageproxystate="invalid"] 
+  #identity-icon {
+    scale: 1.6 !important;
+  }
+}

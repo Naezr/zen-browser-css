@@ -1,0 +1,42 @@
+/*------------------------------------
+ * animations
+ */
+
+:is(
+  .tab-background,
+  .toolbarbutton-icon,
+  .toolbarbutton-badge-stack,
+
+  .toolbarbutton-1,
+  .bookmark-item,
+  .PanelUI-zen-profiles-item,
+
+  .download-state,
+
+  .urlbarView-row,
+  .urlbarView-action,
+  .searchbar-engine-one-off-item,
+  #urlbar-search-mode-indicator,
+
+  #tracking-protection-icon-container,
+  #page-action-buttons > *,
+  #identity-box > *,
+
+  toolbarbutton,
+  toolbaritem,
+  button,
+  menu, 
+  menuitem, 
+  tab
+
+):not(
+  #urlbar-container,
+  #personal-bookmarks
+
+) {
+  transition: background-color .3s ease, scale .1s ease !important;
+  &:is(
+    :active,
+    :not(tab)[open]
+  ) {scale: 0.95 !important;}
+}

@@ -90,18 +90,44 @@
   &::after{
     content: '';
     top: 0;
-    @media not (-moz-bool-pref: "zen.tabs.vertical.right-side")
-    {left: 0;}
-    @media (-moz-bool-pref: "zen.tabs.vertical.right-side")
-    {right: 0;}
     position: absolute;
     width: 100px;
     height: 100%;
     z-index: -1;
-    @media not (-moz-bool-pref: "zen.tabs.vertical.right-side")
-    {margin-left: calc(-5px - var(--zen-element-separation));}
-    @media (-moz-bool-pref: "zen.tabs.vertical.right-side")
-    {margin-right: calc(-5px - var(--zen-element-separation));}
+    @media not (-moz-bool-pref: "zen.tabs.vertical.right-side"){
+      margin-left: calc(-5px - var(--zen-element-separation));
+      left: 0;
+    }
+    @media (-moz-bool-pref: "zen.tabs.vertical.right-side"){
+      margin-right: calc(-5px - var(--zen-element-separation));
+      right: 0;
+    }
+  }
+  
+  /* 3 dots indicator */
+  &:is( :hover, :has([open]) )::before{opacity: 0;}
+  &::before{
+    content: '';
+    top: 0;
+    position: absolute;
+    padding-left: 0px;
+    width: 15px;
+    height: 15px;
+    transform: rotate(90deg);
+    background-image: url(chrome://browser/skin/zen-icons/menu.svg);
+    transition: opacity .3s ease;
+    
+    @media (prefers-color-scheme: dark)
+    {filter: invert()}
+    
+    @media not (-moz-bool-pref: "zen.tabs.vertical.right-side"){
+      margin-left: calc(-6px - var(--zen-element-separation));
+      left: 0;
+    }
+    @media (-moz-bool-pref: "zen.tabs.vertical.right-side"){
+      margin-right: calc(-6px - var(--zen-element-separation));
+      right: 0;
+    }
   }
 }
 

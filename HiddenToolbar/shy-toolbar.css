@@ -48,8 +48,8 @@
   toolbarbutton > :is(.toolbarbutton-badge-stack, .toolbarbutton-icon){
     margin: 2px !important;
     padding: 8px !important;
-    height: 100% !important;
-    width: 100% !important;
+    height: 32px !important;
+    width: 32px !important;
     border-radius: 10px !important;
   }
   
@@ -77,16 +77,16 @@
   
   /* hide & show on hover */
   transition: margin .5s ease !important;
-  margin-top: calc(var(--zen-element-separation) * 2) !important;
+  margin-top: calc(var(--zen-element-separation) * 1.5) !important;
   @media not (-moz-bool-pref: "zen.tabs.vertical.right-side"){
     margin-right: -42px !important;
     &:is( :hover, :has([open]) )
-    {margin-right: calc(var(--zen-element-separation) * 2) !important;}
+    {margin-right: calc(var(--zen-element-separation) * 1.5) !important;}
   }
   @media (-moz-bool-pref: "zen.tabs.vertical.right-side"){
     margin-left: -42px !important;
     &:is( :hover, :has([open]) )
-    {margin-left: calc(var(--zen-element-separation) * 2) !important;}
+    {margin-left: calc(var(--zen-element-separation) * 1.5) !important;}
   }
   
   /* hover hitbox */

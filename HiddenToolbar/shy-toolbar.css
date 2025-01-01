@@ -160,7 +160,10 @@
     transition: height 0.15s ease, opacity 0.1s ease-out, max-height 0.15s ease !important;
     max-height: var(--zen-element-separation) !important;
     overflow: hidden !important;
-    .titlebar-buttonbox-container{opacity: 0 !important;}
+    .titlebar-buttonbox-container{
+      opacity: 0 !important;
+      transition: opacity 0.1s ease-out !important;
+    }
   }
   #zen-appcontent-navbar-container[zen-has-hover]:hover:not(
     :has(#PersonalToolbar:is( :hover, :has([open]) ))

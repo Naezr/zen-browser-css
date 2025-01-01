@@ -65,7 +65,11 @@
 
   /* position */
   position: fixed !important;
+  
   top: 0 !important;
+  @media not (-moz-bool-pref: "zen.view.use-single-toolbar")
+  {top: var(--zen-toolbar-height) !important;}
+  
   @media not (-moz-bool-pref: "zen.tabs.vertical.right-side")
   {right: 0 !important;}
   @media (-moz-bool-pref: "zen.tabs.vertical.right-side")
@@ -151,16 +155,17 @@
 }
 
 /* hide topbar */
-:root[zen-single-toolbar="true"]
-#zen-appcontent-navbar-container{
-  transition: height 0.15s ease, opacity 0.1s ease-out, max-height 0.15s ease !important;
-  max-height: var(--zen-element-separation) !important;
-  overflow: hidden !important;
-  .titlebar-buttonbox-container{opacity: 0 !important;}
-}
-#zen-appcontent-navbar-container[zen-has-hover]:hover:not(
-  :has(#PersonalToolbar:is( :hover, :has([open]) ))
-) {
-  max-height: var(--zen-toolbar-height) !important;
-  .titlebar-buttonbox-container{opacity: 1 !important;}
+:root[zen-single-toolbar="true"]{
+  #zen-appcontent-navbar-container{
+    transition: height 0.15s ease, opacity 0.1s ease-out, max-height 0.15s ease !important;
+    max-height: var(--zen-element-separation) !important;
+    overflow: hidden !important;
+    .titlebar-buttonbox-container{opacity: 0 !important;}
+  }
+  #zen-appcontent-navbar-container[zen-has-hover]:hover:not(
+    :has(#PersonalToolbar:is( :hover, :has([open]) ))
+  ) {
+    max-height: var(--zen-toolbar-height) !important;
+    .titlebar-buttonbox-container{opacity: 1 !important;}
+  }
 }

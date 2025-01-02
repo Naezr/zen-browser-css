@@ -1,0 +1,30 @@
+/*------------------------------------
+ * bottom sidebar buttons
+ */
+#zen-sidebar-icons-wrapper{
+  min-height: 36px !important;
+  
+  background: var(--zen-toolbar-element-bg) !important;
+  border-radius: var(--tab-border-radius) !important;
+  padding: 3px !important;
+  
+  justify-content: center !important;
+  
+  &>:is(toolbarbutton, toolbaritem){
+    height: 30px !important;
+    width: 30px !important;
+    margin: 0px !important;
+    --toolbarbutton-inner-padding: 6px;
+  }
+  
+  toolbarpaletteitem:has(toolbarspring){
+    min-width: 15px !important;
+    max-width: unset !important;
+    height: 100% !important;
+  }
+
+  toolbarspring{
+    min-width: 0px !important;
+    max-width: unset !important;
+  }
+}

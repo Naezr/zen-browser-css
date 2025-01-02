@@ -1,0 +1,95 @@
+/*------------------------------------
+ * tabs toolbar layout
+ */
+#TabsToolbar-customization-target{
+  
+  /* buttons before and after workspaces */
+  #zen-workspaces-button + toolbarbutton,
+  toolbarbutton:has(+#zen-workspaces-button){
+    .toolbarbutton-text{display: none !important;}
+    .toolbarbutton-icon{
+      border-radius: 0px !important;
+      width: 14px !important;
+      height: 14px !important;
+    }
+    width: 28px !important;
+    height: 28px !important;
+    
+    position: absolute !important;
+    top: 36px;
+    z-index: 2;
+  }
+  
+  toolbarbutton:has(+#zen-workspaces-button)
+  {left: 2px;}
+  
+  #zen-workspaces-button + toolbarbutton
+  {right: 2px;}
+  
+  /* workspaces strip */
+  #zen-workspaces-button{
+    margin-inline: auto !important;
+    padding: 0px !important;
+    height: 28px !important;
+    gap: 0px !important;
+    
+    &, & * {transition: all .15s ease !important;}
+    
+    &>*{
+      margin-inline: 0px !important;
+      height: 100% !important;
+      width: 30px !important;
+      border-radius: 0px !important;
+      &:nth-child(1){padding-left: 2px !important;}
+      &:nth-last-child(1){padding-right: 2px !important;}
+    }
+    
+    &:not(:hover) >*[active] .zen-workspace-icon{
+      padding: 2px 4px !important;
+      background: var(--zen-toolbar-element-bg);
+      border-radius: 7px
+    }
+    
+    &:hover{
+      background: var(--zen-toolbar-element-bg) !important;
+      &>*{
+        &:hover{
+          filter: none !important;
+          opacity: 1 !important;
+          background: transparent !important;
+        }
+        &[active]:hover{background: var(--toolbarbutton-active-background) !important;}
+        &[active]{background: var(--zen-toolbar-element-bg) !important;}
+      }
+    }
+  }
+
+  /* bookmarks */
+  #personal-bookmarks{
+    height: 30px !important;
+    padding: 0px !important;
+    margin-inline: 2px !important;
+    width: calc(100% - 4px) !important;
+    margin-bottom: 6px;
+    
+    background: var(--zen-toolbar-element-bg) !important;
+    
+    .bookmark-item{
+      border-radius: 10px !important;
+      &[type="menu"] .toolbarbutton-icon{
+        display: none;
+      }
+    }
+    
+    /* fake chevron */
+    .bookmark-item[label=">"]{
+      margin-left: auto !important;
+      .toolbarbutton-text{display: none !important;}
+      .toolbarbutton-icon{
+        display: flex !important;
+        margin: 0px !important;
+      }
+      list-style-image: url("chrome://global/skin/icons/chevron.svg") !important;
+    }
+  }
+}

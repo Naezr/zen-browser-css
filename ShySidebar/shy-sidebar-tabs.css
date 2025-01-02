@@ -1,0 +1,49 @@
+/*------------------------------------
+ * essentials tweaks
+ */
+#zen-essentials-container{
+  padding-block: 4px 7px !important;
+
+  .tab-icon-image {scale: 1.5}
+  [zen-glance-tab] .tab-icon-image {scale: 1}
+}
+
+@media not (-moz-bool-pref: "zen.workspaces.show-workspace-indicator") {
+  #zen-essentials-container
+  {border-bottom: 1px solid light-dark(rgba(1, 1, 1, 0.075), rgba(255, 255, 255, 0.1));}
+  
+  #vertical-pinned-tabs-container
+  {padding-top: 5px !important;}
+}
+
+/*------------------------------------
+ * backgrounds 
+ */
+.tabbrowser-tab[zen-essential]:not([selected]):hover 
+.tab-background{background: var(--tab-selected-bgcolor) !important;}
+
+.tabbrowser-tab[zen-essential][selected]
+.tab-background{border: 1px solid color-mix(in srgb, currentColor, transparent 45%) !important;}
+
+.tabbrowser-tab[selected]:hover 
+.tab-background{background: var(--toolbarbutton-active-background) !important;}
+
+/*------------------------------------
+ * show tab close/reset button only on hover with cool animation
+ */
+:is(.tab-close-button, .tab-reset-button)
+{transition: all .15s ease !important;}
+
+.tabbrowser-tab:not([pinned],[zen-essential])
+.tab-close-button,
+.tabbrowser-tab[pinned]:not([zen-essential])
+.tab-reset-button
+{display: flex !important;}
+
+.tabbrowser-tab:not(:hover) 
+:is(.tab-close-button, .tab-reset-button){
+  margin-inline-end: -25px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+

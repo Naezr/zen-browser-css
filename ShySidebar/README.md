@@ -30,7 +30,7 @@
    + `workspaces strip`
    + `some button` (optional)
 
-[Video showcase ](https://imgur.com/a/sidebar-video-guide-PynnoXv)
+[Video guide](https://imgur.com/a/sidebar-video-guide-PynnoXv)
 
 -----
 

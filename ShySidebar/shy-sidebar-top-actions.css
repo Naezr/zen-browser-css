@@ -3,6 +3,10 @@
  */
 #TabsToolbar-customization-target{
   
+  /* fix customizing mode */
+  [id*="wrapper"]
+  {border-width: 0px !important;}
+  
   /* buttons before and after workspaces */
   #zen-workspaces-button + toolbarbutton,
   toolbarbutton:has(+#zen-workspaces-button){

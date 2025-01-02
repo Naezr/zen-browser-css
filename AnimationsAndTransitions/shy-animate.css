@@ -40,3 +40,14 @@
     :not(tab)[open]
   ) {scale: 0.95 !important;}
 }
+
+/*------------------------------------
+ * active hover color fix 
+ */
+#navigator-toolbox[zen-sidebar-expanded="true"] {
+& #TabsToolbar-customization-target {
+& > :not(tabs):not(#search-container):not(#zen-workspaces-button), 
+& #tabbrowser-arrowscrollbox-periphery > toolbarbutton {
+&:is([open], [checked]) {
+  background: var(--toolbarbutton-active-background) !important;
+}}}}

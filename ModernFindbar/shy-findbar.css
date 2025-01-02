@@ -26,12 +26,7 @@ findbar {
   
   animation: findbar-animation 0.2s ease;
 
-  transition: 
-    opacity 0.2s ease,
-    visibility 0.3s ease,
-    top 0.3s ease,
-    box-shadow 0.2s ease 
-  !important;
+  transition: all .15s !important;
     
   /* base styles */
   position: absolute;

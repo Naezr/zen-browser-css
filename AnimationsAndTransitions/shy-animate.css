@@ -34,7 +34,7 @@
   #personal-bookmarks
 
 ) {
-  transition: background-color .3s ease, scale .1s ease !important;
+  transition: all .15s ease !important;
   &:is(
     :active,
     :not(tab)[open]

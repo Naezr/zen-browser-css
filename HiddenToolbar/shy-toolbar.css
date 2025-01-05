@@ -35,14 +35,7 @@
   padding-block: 2px 0 !important;
   
   /* buttons size */
-  & > *{
-    --_size: 40px !important;
-    max-height: var(--_size) !important;
-    max-width: var(--_size) !important;
-    min-height: var(--_size) !important;
-    min-width: var(--_size) !important;
-    margin: 0 !important;
-  }
+  & > *{margin: 0 !important;}
   
   /* buttons icons size */
   toolbarbutton > :is(.toolbarbutton-badge-stack, .toolbarbutton-icon){
@@ -53,6 +46,13 @@
     border-radius: 10px !important;
   }
   
+  /* firefox account button */
+  #fxa-toolbar-menu-button
+  .toolbarbutton-badge-stack{
+    padding: 6px !important;
+  }
+  
+  /* extension buttons */
   toolbaritem > toolbarbutton{
     margin-inline: 4px !important;
   }
@@ -134,6 +134,13 @@
       right: 0;
     }
   }
+}
+
+/* fix fullscreen */
+:root[inDOMFullscreen] {
+  #navigator-toolbox,
+  #zen-appcontent-navbar-container
+  {display: none !important;}
 }
 
 /* customizing mode */

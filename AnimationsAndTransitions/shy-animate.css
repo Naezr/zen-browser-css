@@ -35,6 +35,7 @@
 
 ) {
   transition: all .15s ease !important;
+  &:is(tab){transition: scale .15s ease !important;}
   &:is(
     :active,
     :not(tab)[open]

@@ -75,17 +75,32 @@
     margin-inline: 2px !important;
     width: calc(100% - 4px) !important;
     margin-bottom: 6px;
-    
+
     background: var(--zen-toolbar-element-bg) !important;
     border: 1px solid light-dark(transparent, rgba(255, 255, 255, 0.1)) !important;
-    
+
     .bookmark-item{
       border-radius: 10px !important;
       &[type="menu"] .toolbarbutton-icon{
         display: none;
       }
     }
-    
+
+    /* chevron */
+    #PlacesChevron{
+      .toolbarbutton-text{display: none !important;}
+      border-radius: 10px !important;
+      margin: 2px !important;
+      &:not([open]):hover{
+        background-color: var(--toolbarbutton-hover-background) !important;
+        outline-color: var(--toolbarbutton-hover-outline-color) !important; 
+      }
+      &[open]{
+        background-color: var(--toolbarbutton-active-background) !important;
+        outline-color: var(--toolbarbutton-active-outline-color) !important;
+      }
+    }
+
     /* fake chevron */
     .bookmark-item[label=">"]{
       margin-left: auto !important;

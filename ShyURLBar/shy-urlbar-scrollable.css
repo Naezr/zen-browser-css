@@ -17,11 +17,12 @@
     scrollbar-width: none !important;
   }
   
+  .urlbar-input-box{margin-inline: 2px !important;}
+  
+  /* page actions */
   #page-action-buttons:has(
     #urlbar-zoom-button:not([hidden])
   ) {min-width: 30px !important;}
-  
-  .urlbar-input-box{margin-inline: 2px !important;}
   
   #page-action-buttons > :is([role="button"], #userContext-icons, #urlbar-zoom-button) {
     width: 28px !important;
@@ -30,6 +31,17 @@
     scroll-snap-align: center;
   }
   
+  /* tracking button size */
+  .identity-box-button,
+  #tracking-protection-icon-container{
+    align-content: center !important;
+    justify-content: center !important;
+    margin-block: 2px !important; 
+    width: 28px !important;
+    height: calc(100% - 4px) !important;
+  }
+  
+  /* hide 3 dots completely */
   #pageActionButton{display: none !important;}
   
   /* zoom indicator */
@@ -94,7 +106,7 @@
   }
 
   #identity-icon-box:not([open]) {
-    margin-inline-start: calc(-16px - 2 * var(--urlbar-icon-padding));
+    margin-inline-start: calc(-22px - 2 * var(--urlbar-icon-padding));
     opacity: 0;
   }
 

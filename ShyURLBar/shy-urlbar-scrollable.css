@@ -40,7 +40,12 @@
   
   /* rm newtab search icon */
   #identity-box.localResource[pageproxystate="invalid"]{
-    display: none
+    display: none !important;
+  }
+  
+  /* rm searchmode */
+  #urlbar-search-mode-indicator{
+    display: none !important;
   }
 }
 

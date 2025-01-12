@@ -127,4 +127,9 @@
   #blocked-permissions-container{
     display: none !important;
   }
+  
+  /* margin fix */
+  #identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage), #urlbar-label-box {
+    margin-inline-end: 0px !important; 
+  }
 }

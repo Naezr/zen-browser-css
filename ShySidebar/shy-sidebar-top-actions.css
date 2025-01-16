@@ -107,5 +107,31 @@
         outline-color: var(--toolbarbutton-active-outline-color) !important;
       }
     }
+    
+    /* scrollable */
+    @media (-moz-bool-pref: "shy-zen.bookmarks.scrollable-vertical") {
+      #PlacesChevron{display: none}
+      .bookmark-item{
+        visibility: visible !important;
+        max-width: calc(100% - 4px) !important;
+        scroll-snap-align: center !important;
+      }
+      #PlacesToolbarItems{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        overflow-y: scroll !important;
+        scroll-snap-type: y proximity;
+        scrollbar-width: none !important;
+      }
+    }
+    @media (-moz-bool-pref: "shy-zen.bookmarks.scrollable-horisontal") {
+      #PlacesChevron{display: none}
+      .bookmark-item{visibility: visible !important;}
+      #PlacesToolbarItems{
+        display: flex !important;
+        overflow-x: scroll !important;
+        scrollbar-width: none !important;
+      }
+    }
   }
 }

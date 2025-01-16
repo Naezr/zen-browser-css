@@ -22,7 +22,7 @@
 
 [Video guide](https://imgur.com/a/sidebar-video-guide-PynnoXv)
 
-### Options
+### Options for `about:config`
 - `shy-zen.bookmarks.scrollable-horizontal` - Makes bookmarks scrollable in horizontal direction. Can be scrolled only by touchpad, shift+scroll or by horizontal mouse wheel
 - `shy-zen.bookmarks.scrollable-vertical` - Makes bookmarks scrollable in vertical direction. Can be scrolled just by mouse
 

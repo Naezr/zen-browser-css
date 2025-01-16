@@ -22,6 +22,13 @@
 
 [Video guide](https://imgur.com/a/sidebar-video-guide-PynnoXv)
 
+### Options
+- `shy-zen.bookmarks.scrollable-horisontal` - Makes bookmarks scrollable in horisontal direction. Can be scrolled only by touchpad, shift+scroll or by horisontal mouse wheel
+- `shy-zen.bookmarks.scrollable-vertical` - Makes bookmarks scrollable in vertical direction. Can be scrolled just by mouse
+
+> [!NOTE]
+> Do not set both scrolling parameters to `true` at the same time
+
 -----
 
 <h1 align=center> 2/3 Sidebar bottom actions</h1>

@@ -27,7 +27,7 @@
   
   /* size */
   height: fit-content !important;
-  max-height: calc(100vh - var(--zen-element-separation) * 4) !important;
+  max-height: unset !important;
   min-height: unset !important;
   width: 42px !important;
   
@@ -152,6 +152,8 @@
     
     border-radius: 15px !important;
     background: transparent !important;
+    
+    &::before{display: none}
   }
   #zen-appcontent-wrapper{
     @media not (-moz-bool-pref: "zen.tabs.vertical.right-side")

@@ -26,12 +26,12 @@
   backdrop-filter: blur(10px) !important;
   &::after{
     transition: all .15s ease !important;
+    filter: blur(25px) !important;
     opacity: .3;
     
     /* styles grabbed from vanilla zen */
     content: "";
     inset: -50%;
-    filter: blur(15px);
     position: absolute;
     background-size: 100% 100%;
     background-clip: padding-box !important;

@@ -124,7 +124,7 @@
         scrollbar-width: none !important;
       }
     }
-    @media (-moz-bool-pref: "shy-zen.bookmarks.scrollable-horisontal") {
+    @media (-moz-bool-pref: "shy-zen.bookmarks.scrollable-horizontal") {
       #PlacesChevron{display: none}
       .bookmark-item{visibility: visible !important;}
       #PlacesToolbarItems{

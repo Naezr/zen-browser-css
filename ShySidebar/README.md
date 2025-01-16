@@ -10,16 +10,6 @@
 - [Import](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) `shy-sidebar-top-actions.css` to your `userChrome.css`
 
 ### Step 2
-- Sort all of your bookmarks in 2-4 folders with short names. Optionally, you can add a folder named `>` at the end of the list. It will change its icon and will be right-aligned.
-
-| example | how it would look |
-| --- | --- |
-| ![image](https://github.com/user-attachments/assets/8a79f935-bcdd-43c3-aa47-00f75a35d54b) | ![image](https://github.com/user-attachments/assets/bed681a5-0af2-4829-a6e9-ea7dddab6c46) |
-
-> [!NOTE]
-> To sort your bookmarks, open Menu Button (3 dots) > Bookmarks > Manage Bookmarks (aе very bottom of pop-up) 
-
-### Step 3
 
 - Open Menu Button (3 dots) > Bookmarks > Show Bookmarks Toolbar
 - Right click on sidebar > Customize Toolbar...

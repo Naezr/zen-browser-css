@@ -4,8 +4,6 @@
 
 <p align="center"><img src="../assets/shy-toolbar.gif"></p>
 
------
-
 # Install
 
 - [Import](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) `shy-toolbar.css` to your `userChrome.css`

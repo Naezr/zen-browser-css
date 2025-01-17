@@ -4,8 +4,6 @@
 
 <p align="center"><img src="../assets/shy-gradient-editor.png"></p>
 
------
-
 # Install
 
 - [Import](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) `shy-gradient-editor.css` to your `userChrome.css`

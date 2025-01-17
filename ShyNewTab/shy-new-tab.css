@@ -1,0 +1,318 @@
+@-moz-document url("about:home"), url("about:newtab") {
+  
+  :root{
+    --wallpaper-dark1: url("images/dark1.png"); --tr-dark1: color-mix(in srgb, #77aacb 15%, transparent); --tx-dark1: #ccddef;
+    --wallpaper-dark2: url("images/dark2.png"); --tr-dark2: color-mix(in srgb, #6699cb 5%, transparent); --tx-dark2: #bbeeef;
+    --wallpaper-dark3: url("images/dark3.png"); --tr-dark3: color-mix(in srgb, #88aebc 8%, transparent); --tx-dark3: #88aaff;
+    --wallpaper-dark4: url("images/dark4.png"); --tr-dark4: color-mix(in srgb, #bcbccc 10%, transparent); --tx-dark4: #dedebb;
+    --wallpaper-dark5: url("images/dark5.png"); --tr-dark5: color-mix(in srgb, #bcbcee 12%, transparent); --tx-dark5: #dedeee;
+    --wallpaper-dark6: url("images/dark6.png"); --tr-dark6: color-mix(in srgb, #bcbcee 12%, transparent); --tx-dark6: #dedeee;
+    
+    --wallpaper-light1: url("images/light1.png"); --tr-light1: color-mix(in srgb, #cbcb99 35%, transparent); --tx-light1: #202000;
+    --wallpaper-light2: url("images/light2.png"); --tr-light2: color-mix(in srgb, #8899bc 20%, transparent); --tx-light2: #ffffff;
+    --wallpaper-light3: url("images/light3.png"); --tr-light3: color-mix(in srgb, #aaaa50 20%, transparent); --tx-light3: #000111;
+    --wallpaper-light4: url("images/light4.png"); --tr-light4: color-mix(in srgb, #cccc55 20%, transparent); --tx-light4: #000222;
+    --wallpaper-light5: url("images/light5.png"); --tr-light5: color-mix(in srgb, #557755 15%, transparent); --tx-light5: #000333;
+    --wallpaper-light6: url("images/light6.png"); --tr-light6: color-mix(in srgb, #cbcbaa 40%, transparent); --tx-light6: #202020;
+  }
+   
+  /* accent color */
+  :root{
+    --tr-col: color-mix(in srgb, #999999 20%, transparent);
+    --rounding: 10px;
+    --big-rounding: 15px;
+    --giant-rounding: 25px;
+    --blur-radius: 25px;
+   }
+  * {
+    --tr-hov-col: color-mix(in srgb, var(--tr-col) 80%, var(--newtab-text-primary-color));
+    --newtab-background-color-secondary: color-mix(in srgb, var(--newtab-background-color) 90%, var(--newtab-text-primary-color)) !important;
+    --newtab-contextual-text-primary-color: var(--newtab-text-primary-color) !important;
+    --newtab-wordmark-color: var(--newtab-text-primary-color) !important;
+    --newtab-button-text: var(--newtab-text-primary-color) !important;
+    --color-accent-primary-active: var(--newtab-text-primary-color) !important;
+    --icon-color: var(--newtab-text-primary-color) !important;
+    --background-color-box: var(--tr-col) !important;
+  }
+  
+  /* zen logo on bg */
+  body{
+    background-color: color-mix(in srgb, var(--newtab-background-color, #2B2A33) 30%, transparent )  !important;
+    width: 100% !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  body:not([class*="Wallpaper"])::before{
+    content: "";
+    position: absolute;
+    height: 130vh;
+    width: auto;
+    aspect-ratio: 1/1 !important;
+    transform: translate(-50%, -50%);
+    top:100%;
+    left:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 5% !important;  
+    background-image: url('data:image/svg+xml,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%23FFFFFF;}</style><path class="st0" d="M16,22.2c3.4,0,6.2-2.8,6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4,0-6.2,2.8-6.2,6.2C9.8,19.4,12.6,22.2,16,22.2z M20.9,16c0,2.7-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9S20.9,13.3,20.9,16z"/><path class="st0" d="M26.7,16c0,5.9-4.8,10.7-10.7,10.7S5.3,21.9,5.3,16S10.1,5.3,16,5.3S26.7,10.1,26.7,16z M16,24.6c4.8,0,8.6-3.9,8.6-8.6S20.8,7.4,16,7.4S7.4,11.2,7.4,16S11.2,24.6,16,24.6z"/><path class="st0" d="M32,16c0,8.8-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0S32,7.2,32,16z M16,29.1c7.3,0,13.1-5.9,13.1-13.1S23.3,2.9,16,2.9S2.9,8.7,2.9,16S8.7,29.1,16,29.1z"/></svg>');
+  }
+    
+  /* rounded corners */
+  .top-site-button,
+  .context-menu button,
+  .close-button,
+  .home-section .section .selector
+  {border-radius: var(--rounding) !important;}
+  
+  .top-site-outer, 
+  .top-site-inner,
+  .context-menu,
+  .icon-settings,
+  .weatherCard
+  {border-radius: var(--big-rounding) !important;}
+  
+  /* pinned links */
+  .top-site-button {overflow: clip;}
+  
+  .tile, .top-site-icon{
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  .top-site-button, .customize-menu{
+    background-color: var(--tr-col) !important;
+    backdrop-filter: blur(var(--blur-radius));
+  }
+    
+  .title {
+    background-color: color-mix(in srgb, var(--tr-col) 90%, var(--newtab-text-primary-color));
+    & > span {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+  
+  .top-site-outer:is(.active, :focus, :hover){
+    background: var(--tr-hov-col) !important;
+  }
+  
+  .top-site-outer, .top-site-inner {
+    & > a {padding: 0 !important;}
+    padding: 5px;
+  }
+  
+  .top-site-outer:not(:hover) .icon-pin-small{display: none !important;}
+  
+  .context-menu-item{
+    padding-inline: 5px !important;
+    padding-block: 1px !important;
+  }
+  
+  /* search box */
+  .search-handoff-button {
+    border-radius: 100px !important;
+    backdrop-filter: blur(var(--blur-radius));
+    background-color: var(--tr-col) !important;
+  }
+
+  /* height overflow */
+  @media (height > 700px) {
+    body:not(.inline-onboarding) .fixed-search .search-wrapper {
+      background-color: var(--tr-col) !important;
+      backdrop-filter: blur(var(--blur-radius));
+    }
+    .logo-and-wordmark {display: flex !important;}
+  }
+  
+  @media (height <= 700px) {
+    .search-wrapper {padding: 20px 0 30px !important;}
+    .outer-wrapper > main {margin-top: 0px !important;}
+  }
+  
+  /* margin to logo when only search is enabled */
+  .only-search .logo-and-wordmark {margin-top: 20px !important;}
+    
+  /* central box */
+  main{
+    margin-top: 15% !important;
+    height: 50%;
+    background-color: var(--tr-col);
+    border-radius: var(--giant-rounding);
+  }
+  
+  /* logo */
+  .logo{
+    width: 100px !important;
+    height: 100px !important;
+    background: var(--newtab-text-primary-color) !important;
+    mask-image: url('data:image/svg+xml,<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor: default;"><path fill-rule="evenodd" clip-rule="evenodd" d="M32 44.3077C38.7974 44.3077 44.3077 38.7974 44.3077 32C44.3077 25.2027 38.7974 19.6923 32 19.6923C25.2027 19.6923 19.6923 25.2027 19.6923 32C19.6923 38.7974 25.2027 44.3077 32 44.3077ZM41.8462 32C41.8462 37.4379 37.4379 41.8462 32 41.8462C26.5621 41.8462 22.1538 37.4379 22.1538 32C22.1538 26.5621 26.5621 22.1538 32 22.1538C37.4379 22.1538 41.8462 26.5621 41.8462 32Z" fill="context-fill"/><path fill-rule="evenodd" clip-rule="evenodd" d="M53.3333 32C53.3333 43.7821 43.7821 53.3333 32 53.3333C20.2179 53.3333 10.6667 43.7821 10.6667 32C10.6667 20.2179 20.2179 10.6667 32 10.6667C43.7821 10.6667 53.3333 20.2179 53.3333 32ZM32 49.2308C41.5163 49.2308 49.2308 41.5163 49.2308 32C49.2308 22.4837 41.5163 14.7692 32 14.7692C22.4837 14.7692 14.7692 22.4837 14.7692 32C14.7692 41.5163 22.4837 49.2308 32 49.2308Z" fill="context-fill"/><path fill-rule="evenodd" clip-rule="evenodd" d="M64 32C64 49.6731 49.6731 64 32 64C14.3269 64 0 49.6731 0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32ZM32 58.2564C46.501 58.2564 58.2564 46.501 58.2564 32C58.2564 17.499 46.501 5.74359 32 5.74359C17.499 5.74359 5.74359 17.499 5.74359 32C5.74359 46.501 17.499 58.2564 32 58.2564Z" fill="context-fill"/></svg>') !important;
+    mask-size: 100% !important;
+    mask-repeat: no-repeat !important;
+  }
+  
+  .wallpaper-input:hover {
+    filter: brightness(75%) !important;
+    outline-color: inherit !important;
+  }
+
+
+  /* wallpaper */
+  .wallpaper-attribution{display: none !important;}
+  
+  /* Dark 1 */
+  #dark-sky,
+  #photographs[style*='e94b1e49-c518-40d6-98e3-dffab6cc370d.avif'],
+  body[style*="e94b1e49-c518-40d6-98e3-dffab6cc370d.avif"]{
+    background-image: var(--wallpaper-dark1) !important;
+    --tr-col: var(--tr-dark1) !important;
+    --newtab-text-primary-color: var(--tx-dark1) !important;
+  }
+
+  /* Dark 2 */
+  #dark-mountain,
+  #photographs[style*='af6073d2-cbb2-4e28-b642-3327d14808b2.avif'],
+  body[style*="af6073d2-cbb2-4e28-b642-3327d14808b2.avif"]{
+    background-image: var(--wallpaper-dark2) !important;
+    --tr-col: var(--tr-dark2) !important;
+    --newtab-text-primary-color: var(--tx-dark2) !important;
+  }
+
+  
+  /* Dark 3 */
+  #dark-panda,
+  #photographs[style*='6b8eb3cf-f232-4c7b-a179-afd174555134.avif'],
+  body[style*="6b8eb3cf-f232-4c7b-a179-afd174555134.avif"]{
+    background-image: var(--wallpaper-dark3) !important;
+    --tr-col: var(--tr-dark3) !important;
+    --newtab-text-primary-color: var(--tx-dark3) !important;
+  }
+
+  /* Dark 4 */
+  #dark-fox-anniversary,
+  #photographs[style*='d8b71c77-9985-41d2-b98e-51bebc60e595.avif'],
+  body[style*="d8b71c77-9985-41d2-b98e-51bebc60e595.avif"]{
+    background-image: var(--wallpaper-dark4) !important;
+    --tr-col: var(--tr-dark4) !important;
+    --newtab-text-primary-color: var(--tx-dark4) !important;
+  }
+
+  /* Dark 5 */
+  #dark-landscape,
+  #photographs[style*='10e23599-85bc-4660-ae06-7a67befbbcf9.avif'],
+  body[style*="10e23599-85bc-4660-ae06-7a67befbbcf9.avif"]{
+    background-image: var(--wallpaper-dark5) !important;
+    --tr-col: var(--tr-dark5) !important;
+    --newtab-text-primary-color: var(--tx-dark5) !important;
+  }
+
+  /* Dark 6 */
+  #dark-beach,
+  #photographs[style*='966b18ad-3733-41c4-92f6-c89cdf1381d0.avif'],
+  body[style*="966b18ad-3733-41c4-92f6-c89cdf1381d0.avif"]{
+    background-image: var(--wallpaper-dark6) !important;
+    --tr-col: var(--tr-dark6) !important;
+    --newtab-text-primary-color: var(--tx-dark6) !important;
+  }
+
+  /* Light 1 */
+  #light-panda,
+  #photographs[style*='dfd3762e-f77d-4b6e-ac75-32eb2549ef40.avif'],
+  body[style*="dfd3762e-f77d-4b6e-ac75-32eb2549ef40.avif"]{
+    background-image: var(--wallpaper-light1) !important;
+    --tr-col: var(--tr-light1) !important;
+    --newtab-text-primary-color: var(--tx-light1) !important;
+  }
+
+  /* Light 2 */
+  #light-landscape,
+  #photographs[style*='d9289c5b-8c78-4b27-b5d8-afe7285ce7d1.avif'],
+  body[style*="d9289c5b-8c78-4b27-b5d8-afe7285ce7d1.avif"]{
+    background-image: var(--wallpaper-light2) !important;
+    --tr-col: var(--tr-light2) !important;
+    --newtab-text-primary-color: var(--tx-light2) !important;
+  }
+
+  /* Light 3 */
+  #light-mountain,
+  #photographs[style*='5344443f-f427-4029-bc6b-68bc22f83355.avif'],
+  body[style*="5344443f-f427-4029-bc6b-68bc22f83355.avif"]{
+    background-image: var(--wallpaper-light3) !important;
+    --tr-col: var(--tr-light3) !important;
+    --newtab-text-primary-color: var(--tx-light3) !important;
+  }
+
+  /* Light 4 */
+  #light-sky,
+  #photographs[style*='45ecab20-ffb9-47b4-94ff-07a5f8b9f53f.avif'],
+  body[style*="45ecab20-ffb9-47b4-94ff-07a5f8b9f53f.avif"]{
+    background-image: var(--wallpaper-light4) !important;
+    --tr-col: var(--tr-light4) !important;
+    --newtab-text-primary-color: var(--tx-light4) !important;
+  }
+
+  /* Light 5 */
+  #light-beach,
+  #photographs[style*='56a7f3ae-70cc-45f2-82ec-1d39acdd3b8d.avif'],
+  body[style*="56a7f3ae-70cc-45f2-82ec-1d39acdd3b8d.avif"]{
+    background-image: var(--wallpaper-light5) !important;
+    --tr-col: var(--tr-light5) !important;
+    --newtab-text-primary-color: var(--tx-light5) !important;
+  }
+
+  /* Light 6 */
+  #light-fox-anniversary,
+  #photographs[style*='a5a041de-9275-4eb5-8f21-a0171c82d388.avif'],
+  body[style*="a5a041de-9275-4eb5-8f21-a0171c82d388.avif"]{
+    background-image: var(--wallpaper-light6) !important;
+    --tr-col: var(--tr-light6) !important;
+    --newtab-text-primary-color: var(--tx-light6) !important;
+  }
+
+  
+  /* settings */
+  .icon-settings:hover {background-color: var(--tr-hov-col) !important;}
+  .close-button-wrapper {background-color: transparent !important;}
+  
+  .wallpaper-list{
+    background-color: transparent !important;
+    backdrop-filter: blur(var(--blur-radius)) !important;
+    
+    width: 100% !important;
+    height: 100% !important;
+
+    left: 0 !important;
+    right: 0 !important;
+    
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+  
+  .home-section .section .selector{
+    background-color: var(--tr-col) !important;
+    &:hover{background-color: var(--tr-hov-col) !important;}
+  }
+  
+  .toggle-button {
+    border-color: var(--toggle-border-color) !important;
+    &[aria-pressed="true"]:not(:hover){
+      background: color-mix(in srgb, var(--toggle-background-color-pressed-hover), transparent) !important;
+    }
+  }
+
+  /* weather */
+  .weatherInfoLink:hover, .weatherButtonContextMenuWrapper:hover {
+    background-color: var(--tr-hov-col) !important;
+  }
+  
+  .weatherCard:not(:hover) .weatherButtonContextMenuWrapper{opacity: 0}
+  .weatherInfoLink {border-radius: 0px !important;}
+  .weatherButtonContextMenuWrapper::after{display: none !important;}
+  
+}
+
+@-moz-document url("about:privatebrowsing") {
+  .search-handoff-button {border-radius: 100px !important;}
+  .info {border-radius: var(--big-rounding) !important;}
+}

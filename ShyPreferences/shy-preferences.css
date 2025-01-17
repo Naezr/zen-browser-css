@@ -1,0 +1,66 @@
+@-moz-document url-prefix("about:preferences") {
+  
+  /* consistent footer buttons */
+  .sidebar-footer-link{
+    padding-inline: 20px !important;
+  }
+  .sidebar-footer-icon{
+    margin: 0px !important;
+    margin-right: 5px !important;
+    height: 20px !important;
+    width: 20px !important;
+  }
+  .sidebar-footer-label{
+    margin: 0px !important;
+    padding-left: 9px !important;
+  }
+  
+  /* better spacer */
+  .navigation > spacer{
+    border-bottom: 1px solid color-mix(in srgb, CurrentColor, transparent 70%) !important;
+    margin: 5px 15px !important;
+  }
+  
+  .navigation{
+    padding-inline: 4% !important;
+    padding-block: 40px !important;
+  }
+  
+  /* categories animation */
+  .sidebar-footer-link,
+  .category{
+    transition: background .3s ease, scale .1s ease !important;
+    &:active{scale: .95 !important;}
+  }
+  
+  /* small width fix */
+  @media (max-width: 1300px) {
+    #zenLayoutList > hbox img
+    {width: 170px !important;}
+  }
+  @media (max-width: 830px) {
+    :root {--in-content-sidebar-width: 50px !important;}
+    
+    #searchInput{display: none}
+    
+    .sidebar-footer-link,
+    .category{
+      &, .category-icon, .sidebar-footer-icon{
+        margin: 0px !important;
+        padding: 0px !important;
+      }
+      
+      align-content: center !important;
+      justify-content: center !important;
+      width: var(--in-content-sidebar-width) !important;
+    }
+    
+    .navigation
+    {padding: 10px 5px !important;}
+    
+    .main-content
+    {padding-left: 35px !important;}
+  }
+}
+
+

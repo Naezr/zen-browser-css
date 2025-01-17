@@ -135,8 +135,13 @@
   .only-search .logo-and-wordmark {margin-top: 20px !important;}
     
   /* central box */
+  .outer-wrapper{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
   main{
-    margin-top: 15% !important;
+    margin: 0 !important;
     height: 50%;
     background-color: var(--tr-col);
     border-radius: var(--giant-rounding);

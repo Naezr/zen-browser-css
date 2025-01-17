@@ -1,0 +1,37 @@
+/*------------------------------------
+ * compact menu 
+ */
+#context-navigation > .menuitem-iconic[disabled="true"] {background-color: transparent !important;}
+
+menupopup .menu-iconic-left{
+  margin-right: 12px !important;
+  margin-left: 5px !important;
+}
+
+menuitem[type="checkbox"]:not([checked="true"]) 
+.menu-iconic-icon {display: none !important;}
+
+menupopup > :is(menuitem, menu){
+  & > * {
+    padding: 0px !important;
+    margin: 1px !important;
+  }
+  .menu-iconic-text, .menu-iconic-highlightable-text{
+    mask-image: linear-gradient(to left, transparent, black 6ch) !important;
+    max-width: 270px !important;
+  }
+  
+  max-width: 300px !important;
+  height: fit-content !important;
+  margin: 0 !important;
+  padding-block: 3px !important;
+}
+
+:is(menuitem, menu).bookmark-item{
+  padding-inline: 5px !important;
+  .menu-iconic-left{margin-inline: 0px 3px !important;}
+}
+
+:is(.bookmark-item, #PlacesChevron, #bookmarks-menu-button, #sidebarMenu-popup) 
+:is(menuitem, menu) {margin-inline: 2px !important;}
+

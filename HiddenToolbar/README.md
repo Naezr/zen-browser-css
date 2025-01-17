@@ -2,7 +2,7 @@
 
 <h3 align=center>This mod turns the Bookmarks Toolbar into a hidden panel on the side.</h3>
 
-https://github.com/user-attachments/assets/385eb2bb-e0f6-47b1-a1c0-128f389b2c1d
+<p align="center"><img src="../assets/shy-toolbar.gif"></p>
 
 -----
 

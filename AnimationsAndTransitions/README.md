@@ -2,7 +2,7 @@
 
 <h3 align=center>This mod adds smooth background transition and on-click animation for almost all buttons</h3>
 
-https://github.com/user-attachments/assets/ce0acbb1-3880-495e-aaff-214293510584
+<p align="center"><img src="../assets/shy-animate.gif"></p>
 
 # Install
 

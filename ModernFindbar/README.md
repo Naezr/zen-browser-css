@@ -2,7 +2,7 @@
 
 <h3 align=center>This mod makes findbar (ctrl + f) cooler</h3>
 
-https://github.com/user-attachments/assets/88a0d069-5b3b-4ede-8cb7-2962ae6bb68d
+<p align="center"><img src="../assets/shy-findbar.gif"></p>
 
 # Install
 

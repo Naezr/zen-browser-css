@@ -2,7 +2,7 @@
 
 <h3 align=center>This mod restyles color palette and adds numbers to dots</h3>
 
-<p align="center"><img src="https://github.com/user-attachments/assets/e97f33ae-c851-4f82-b1fc-166107b7c3bc"></p>
+<p align="center"><img src="../assets/shy-gradient-editor.png"></p>
 
 -----
 

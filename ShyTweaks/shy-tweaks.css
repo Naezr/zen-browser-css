@@ -40,14 +40,6 @@
 }
 
 /*------------------------------------
- * force rounded corners for website
- */
-:root:not([inDOMFullscreen])
-#tabbrowser-tabpanels {
-  clip-path: inset(0% 0% 0% 0% round var(--zen-border-radius)) !important;
-}
-
-/*------------------------------------
  * hide some things
  */
 

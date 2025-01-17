@@ -50,6 +50,10 @@
         padding: 0px !important;
       }
       
+      .sidebar-footer-label,
+      .category-name
+      {display: none !important;}
+      
       align-content: center !important;
       justify-content: center !important;
       width: var(--in-content-sidebar-width) !important;

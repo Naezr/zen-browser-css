@@ -20,39 +20,52 @@
  * backgrounds 
  */
 
-.tabbrowser-tab[zen-essential] .tab-background{
-  &::before{display: none}
-  overflow: hidden !important;
-  backdrop-filter: blur(10px) !important;
-  &::after{
-    transition: all .15s ease !important;
-    filter: blur(25px) !important;
-    opacity: .3;
-    
-    /* styles grabbed from vanilla zen */
-    content: "";
-    inset: -50%;
-    position: absolute;
-    background-size: 100% 100%;
-    background-clip: padding-box !important;
-    background-image: var(--zen-tab-icon);
-    z-index: -1;
-    /* */
+@media (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
+  .tabbrowser-tab[zen-essential] .tab-background{
+    &::before{display: none}
+    overflow: hidden !important;
+    backdrop-filter: blur(10px) !important;
+    &::after{
+      transition: all .15s ease !important;
+      filter: blur(25px) !important;
+      opacity: .3;
+
+      /* styles grabbed from vanilla zen */
+      content: "";
+      inset: -50%;
+      position: absolute;
+      background-size: 100% 100%;
+      background-clip: padding-box !important;
+      background-image: var(--zen-tab-icon);
+      z-index: -1;
+      /* */
+    }
   }
+
+  .tabbrowser-tab[zen-essential][selected]
+  .tab-background{
+    border: 1px solid color-mix(in srgb, currentColor, transparent 45%) !important;
+    &::after{opacity: .5}
+  }
+
+  .tabbrowser-tab[zen-essential]:not([selected]):hover
+  .tab-background::after{opacity: .4 !important;}
+
+  .tabbrowser-tab[zen-essential][selected]:hover
+  .tab-background::after{opacity: .7 !important;}
 }
 
-.tabbrowser-tab[zen-essential][selected]
-.tab-background{
-  border: 1px solid color-mix(in srgb, currentColor, transparent 45%) !important;
-  &::after{opacity: .5}
+@media not (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
+  .tabbrowser-tab[zen-essential]:not([selected]):hover 
+  .tab-background{background: var(--tab-selected-bgcolor) !important;}
+  
+  .tabbrowser-tab[zen-essential][selected]
+  .tab-background{border: 1px solid color-mix(in srgb, currentColor, transparent 45%) !important;}
+  
+  .tabbrowser-tab[selected][zen-essential]:hover 
+  .tab-background{background: var(--toolbarbutton-active-background) !important;}
 }
-
-.tabbrowser-tab[zen-essential]:not([selected]):hover
-.tab-background::after{opacity: .4 !important;}
-
-.tabbrowser-tab[zen-essential][selected]:hover
-.tab-background::after{opacity: .7 !important;}
-
+  
 .tabbrowser-tab[selected]:not([zen-essential]):hover 
 .tab-background{background: var(--toolbarbutton-active-background) !important;}
 

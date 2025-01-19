@@ -68,15 +68,19 @@
     }
   }
   
-  #personal-bookmarks + #zen-workspaces-button,
-  #personal-bookmarks + toolbarbutton + #zen-workspaces-button{
-    margin-top: 36px !important;
+  &:has( > #personal-bookmarks:nth-child(1))
+  {padding-top: 36px !important;}
+  
+  #wrapper-personal-bookmarks{
+    height: 30px !important;
+    padding: 0px !important;
   }
 
   /* bookmarks */
   #personal-bookmarks{
     position: absolute !important;
-    
+    margin-top: -36px;
+
     height: 30px !important;
     padding: 0px !important;
     margin-inline: 2px !important;
@@ -135,3 +139,6 @@
     }
   }
 }
+
+:root[customizing] #TabsToolbar-customization-target #personal-bookmarks
+{margin-top: 0px !important;}

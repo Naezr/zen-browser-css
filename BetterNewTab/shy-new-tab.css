@@ -105,6 +105,8 @@
   
   .top-site-outer:not(:hover) .icon-pin-small{display: none !important;}
   
+  .tile{outline: none !important;}
+  
   .context-menu-item{
     padding-inline: 5px !important;
     padding-block: 1px !important;

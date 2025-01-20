@@ -18,6 +18,8 @@
     --toolbarbutton-inner-padding: 6px;
   }
   
+  #zen-workspaces-button {width: auto !important;}
+  
   toolbarpaletteitem:has(toolbarspring){
     min-width: 15px !important;
     max-width: unset !important;

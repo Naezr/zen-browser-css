@@ -7,22 +7,11 @@
 }
 
 /*------------------------------------
- * fix sidebar top separator
- */
-:root[zen-single-toolbar="true"] {
-  & #zen-sidebar-top-buttons-separator {
-    width: unset !important;
-    display: flex !important;
-    flex: 1 !important;
-  }
-}
-
-/*------------------------------------
  * float windows
  */
 :root:not([chromehidden=""]){
   #nav-bar{margin-inline: 5px 0px !important;}
-  #PanelUI-menu-button{list-style-image: url(chrome://branding/content/icon16.png) !important;}
+  #identity-icon-label{display: none !important;}
 }
 
 /*------------------------------------
@@ -76,6 +65,14 @@
 #zen-sidebar-splitter{opacity: 0 !important;}
 
 /*------------------------------------
+ * sidebar fixes
+ */
+#sidebar-box{
+  margin: 0px !important;
+  border-radius: var(--zen-native-inner-radius) !important;
+}
+
+/*------------------------------------
  * blur zen sidebar
  */
 #zen-sidebar-web-panel[pinned]{
@@ -96,67 +93,13 @@
 }
 
 /*------------------------------------
- * consistent 'Zen Sidebar' separator width 
- */
-:root:not([zen-right-side="true"])
-#zen-sidebar-web-panel-wrapper:not( :has(
-  #zen-sidebar-web-panel:is([hidden="true"], [pinned="true"])
-) ) {
-  margin-right: calc(var(--zen-element-separation)) !important;
-  margin-left: 0px !important;
-}
-
-#sidebar-box
-{margin: 0px !important;}
-
-#sidebar-splitter{
-  width: var(--zen-element-separation) !important;
-  margin: 0px !important;
-  border: 0px solid transparent !important;
-}
-
-#zen-sidebar-web-panel-wrapper{
-  margin: calc(var(--zen-element-separation) * .5) !important;
-  width: calc(100% - var(--zen-element-separation)) !important;
-  height: calc(100% - var(--zen-element-separation)) !important;
-}
-
-/*------------------------------------
- * floating sidebar
- */
-#sidebar-box:not([positionend])
-{height: 100% !important;}
-
-#sidebar-box[positionend]{
-  position: absolute;
-  top: calc(var(--zen-element-separation) * .5);
-  left: calc(var(--zen-element-separation) * .5);
-  
-  min-height: 300px !important;
-  max-height: calc(100vh - var(--zen-element-separation) * 3);
-  min-width: 200px !important;
-  max-width: 40% !important;
-  z-index: 1 !important;
-  resize: both !important;
-  
-  /* background */
-  background: color-mix(in srgb, var(--zen-colors-tertiary) 70%, transparent 30%) !important;
-  backdrop-filter: blur(10px) !important;
-  border: 1px solid var(--arrowpanel-border-color) !important;
-  border-radius: var(--zen-border-radius) !important;
-  
-  /* remove splitter */
-  & + #sidebar-splitter{display: none !important;}
-}
-
-/*------------------------------------
  * notification dot on tab position fix
  */
 .tabbrowser-tab:not([zen-essential]):is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected]),
 .tabbrowser-tab:not([zen-essential]) > .tab-stack > .tab-content[pinned][titlechanged]:not([selected]),
 #tabbrowser-tabs[orient="vertical"]:not([expanded])
 .tabbrowser-tab:not([zen-essential]) > .tab-stack > .tab-content[titlechanged]:not([selected]) {
-  background-position: 17px 30px !important;
+  background-position: 19px 30px !important;
   background-position-y: bottom 6.5px;
 }
 

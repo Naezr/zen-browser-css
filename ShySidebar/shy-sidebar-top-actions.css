@@ -3,6 +3,7 @@
  */
 
 #navigator-toolbox
+#urlbar:not([breakout][breakout-extend])
 #urlbar-background{
   background: var(--zen-toolbar-element-bg) !important;
   border: 1px solid light-dark(transparent, rgba(255, 255, 255, 0.1)) !important;

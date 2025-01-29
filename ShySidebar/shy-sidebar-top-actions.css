@@ -9,44 +9,27 @@
   border: 1px solid light-dark(transparent, rgba(255, 255, 255, 0.1)) !important;
 }
 
-#TabsToolbar-customization-target{
+
   
-  /* fix customizing mode */
-  [id*="wrapper"]
-  {border-width: 0px !important;}
+/* workspaces strip */
+@media (-moz-bool-pref: "shy-zen.workspaces-on-top"){
   
-  /* buttons before and after workspaces */
-  #zen-workspaces-button + toolbarbutton,
-  toolbarbutton:has(+#zen-workspaces-button){
-    .toolbarbutton-text{display: none !important;}
-    .toolbarbutton-icon{
-      border-radius: 0px !important;
-      width: 14px !important;
-      height: 14px !important;
-    }
-    width: 28px !important;
-    height: 28px !important;
-    
-    position: absolute !important;
-    top: 36px;
-    z-index: 2;
-  }
+  :root:has(#TabsToolbar-customization-target > #personal-bookmarks:nth-child(1))
+  #zen-workspaces-button
+  {bottom: calc(100vh - 150px);}
   
-  toolbarbutton:has(+#zen-workspaces-button)
-  {left: 2px;}
+  #zen-workspaces-button
+  {bottom: calc(100vh - 114px);}
   
-  #zen-workspaces-button + toolbarbutton
-  {right: 2px;}
-  
-  /* workspaces strip */
   #zen-workspaces-button{
-    margin-inline: auto !important;
+    position: fixed !important;
+    display: flex !important;
     padding: 0px !important;
     height: 28px !important;
     gap: 0px !important;
-    
+
     &, & * {transition: all .15s ease !important;}
-    
+
     &>*{
       margin-inline: 0px !important;
       height: 100% !important;
@@ -55,13 +38,13 @@
       &:nth-child(1){padding-left: 2px !important;}
       &:nth-last-child(1){padding-right: 2px !important;}
     }
-    
+
     &:not(:hover) >*[active] .zen-workspace-icon{
       padding: 2px 4px !important;
       background: var(--zen-toolbar-element-bg);
       border-radius: 7px
     }
-    
+
     &:hover{
       background: var(--zen-toolbar-element-bg) !important;
       &>*{
@@ -75,15 +58,67 @@
       }
     }
   }
+
+  #wrapper-zen-workspaces-button{
+    width: 40px !important;
+    background: red !important;
+  }
+}
+
+#TabsToolbar-customization-target{
   
-  &:has( > #personal-bookmarks:nth-child(1))
-  {padding-top: 36px !important;}
+  @media (-moz-bool-pref: "shy-zen.workspaces-on-top"){
+    /* buttons before and after workspaces */
+    & > :nth-child(1 of toolbarbutton),
+    & > :nth-child(2 of toolbarbutton){
+      .toolbarbutton-text{display: none !important;}
+      .toolbarbutton-icon{
+        border-radius: 0px !important;
+        width: 14px !important;
+        height: 14px !important;
+      }
+      width: 28px !important;
+      height: 28px !important;
+
+      position: absolute !important;
+      top: 0px;
+      z-index: 2;
+    }
+    
+    &:has( > #personal-bookmarks:nth-child(1)){
+      & > :nth-child(1 of toolbarbutton),
+      & > :nth-child(2 of toolbarbutton)
+      {top: 36px;}
+    }
+
+    &:nth-child(1 of toolbarbutton)
+    {left: 2px;}
+
+    & > :nth-child(2 of toolbarbutton)
+    {right: 2px;}
+  }
+  
+  /* fix customizing mode */
+  [id*="wrapper"]
+  {border-width: 0px !important;}
   
   #wrapper-personal-bookmarks{
     height: 30px !important;
     padding: 0px !important;
   }
-
+  
+  /* top padding */
+  &:has( > #personal-bookmarks:nth-child(1))
+  {padding-top: 36px !important;}
+  
+  @media (-moz-bool-pref: "shy-zen.workspaces-on-top"){
+    padding-top: 30px !important;
+    &:has( > #personal-bookmarks:nth-child(1)){
+      padding-top: 66px !important;
+      #personal-bookmarks{margin-top: -66px !important;}
+    }
+  }
+  
   /* bookmarks */
   #personal-bookmarks{
     position: absolute !important;
@@ -97,6 +132,7 @@
 
     background: var(--zen-toolbar-element-bg) !important;
     border: 1px solid light-dark(transparent, rgba(255, 255, 255, 0.1)) !important;
+    border-radius: 10px !important;
 
     #PlacesToolbarItems > .bookmark-item{
       border-radius: 10px !important;

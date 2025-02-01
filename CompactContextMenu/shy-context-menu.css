@@ -16,10 +16,6 @@ menupopup > :is(menuitem, menu){
     padding: 0px !important;
     margin: 1px !important;
   }
-  .menu-iconic-text, .menu-iconic-highlightable-text{
-    mask-image: linear-gradient(to left, transparent, black 6ch) !important;
-    max-width: 270px !important;
-  }
   
   max-width: 300px !important;
   height: fit-content !important;

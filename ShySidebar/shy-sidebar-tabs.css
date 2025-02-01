@@ -80,20 +80,6 @@
   .tab-background::after{opacity: .7 !important;}
 }
 
-@media not (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
-  .tabbrowser-tab[zen-essential]:not([selected]):hover 
-  .tab-background{background: var(--tab-selected-bgcolor) !important;}
-  
-  .tabbrowser-tab[zen-essential][selected]
-  .tab-background{border: 1px solid color-mix(in srgb, currentColor, transparent 45%) !important;}
-  
-  .tabbrowser-tab[selected][zen-essential]:hover 
-  .tab-background{background: var(--toolbarbutton-active-background) !important;}
-}
-  
-.tabbrowser-tab[selected]:not([zen-essential]):hover 
-.tab-background{background: var(--toolbarbutton-active-background) !important;}
-
 /*------------------------------------
  * show tab close/reset button only on hover with cool animation
  */

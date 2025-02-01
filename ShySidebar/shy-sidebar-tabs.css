@@ -41,33 +41,6 @@
   right: 0px !important;
 }
 
-/* regular tab glance */
-.tabbrowser-tab:not([zen-essential]):has([zen-glance-tab]) {
-  .tabbrowser-tab[zen-glance-tab]{
-    height: 40px !important;
-    width: 40px !important;
-    margin-inline-start: 6px !important;
-    
-    .tab-close-button,
-    .tab-label-container
-    {display: none !important;}
-    
-    .tab-content{
-      align-content: center !important;
-      justify-content: center !important;
-      padding: 0px !important;
-    }
-    
-    .tab-background{background: var(--toolbarbutton-active-background) !important;}
-  }
-  
-  & > .tab-stack > .tab-content
-  {padding-inline-end: 0px !important;}
-  
-  & > .tab-stack > .tab-background
-  {margin-inline-end: 42px !important;}
-}
-
 /*------------------------------------
  * backgrounds 
  */

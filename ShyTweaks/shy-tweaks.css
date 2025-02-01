@@ -68,17 +68,6 @@
 #nav-bar
 {border: 0px solid transparent !important;}
 
-/* sidebar splitter color on hover */
-#zen-sidebar-splitter{opacity: 0 !important;}
-
-/*------------------------------------
- * sidebar fixes
- */
-#sidebar-box{
-  margin: 0px !important;
-  border-radius: var(--zen-native-inner-radius) !important;
-}
-
 /*------------------------------------
  * blur zen sidebar
  */
@@ -108,22 +97,6 @@
 .tabbrowser-tab:not([zen-essential]) > .tab-stack > .tab-content[titlechanged]:not([selected]) {
   background-position: 19px 30px !important;
   background-position-y: bottom 6.5px;
-}
-
-/*------------------------------------
- * tabs on right notification fix
- */
-@media (-moz-bool-pref: "zen.tabs.vertical.right-side"){
-  #tab-notification-deck,
-  #zen-appcontent-navbar-container{
-    overflow: visible !important;
-    opacity: 1 !important;
-    pointer-events: all !important;
-  }
-  .notificationbox-stack[notificationside="top"] {
-    left: calc(var(--zen-element-separation) * 1.5) !important;
-    right: unset !important;
-  }
 }
 
 /*------------------------------------

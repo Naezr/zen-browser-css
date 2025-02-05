@@ -41,6 +41,9 @@
 
 - [Import](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) `shy-sidebar-bottom-actions.css` to your `userChrome.css`
 
+> [!NOTE]
+> If you want to move workspaces switcher away from here, use `shy-sidebar-top-actions.css` and set `shy-zen.workspaces-on-top` to `true`
+
 -----
 
 <h1 align=center> 3/3 Shy tabs</h1>

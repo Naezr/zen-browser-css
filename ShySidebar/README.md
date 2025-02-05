@@ -17,12 +17,12 @@
 - Put items inside sidebar in this order:
    + `bookmarks`
    + `some button` (optional)
-   + `workspaces strip`
    + `some button` (optional)
 
-[Video guide](https://imgur.com/a/sidebar-video-guide-PynnoXv)
+[Video guide (outdated)](https://imgur.com/a/sidebar-video-guide-PynnoXv)
 
 ### Options for `about:config`
+- `shy-zen.workspaces-on-top` - Enables workspaces switcher on top
 - `shy-zen.bookmarks.scrollable-horizontal` - Makes bookmarks scrollable in horizontal direction. Can be scrolled only by touchpad, shift+scroll or by horizontal mouse wheel
 - `shy-zen.bookmarks.scrollable-vertical` - Makes bookmarks scrollable in vertical direction. Can be scrolled just by mouse
 

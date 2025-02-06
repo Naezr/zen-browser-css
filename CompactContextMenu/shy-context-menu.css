@@ -31,3 +31,41 @@ menupopup > :is(menuitem, menu){
 :is(.bookmark-item, #PlacesChevron, #bookmarks-menu-button, #sidebarMenu-popup) 
 :is(menuitem, menu) {margin-inline: 2px !important;}
 
+/*------------------------------------
+ * tab menu 
+ */
+#tabContextMenu:has(
+      #context_openANewTab:not([hidden])
+):has(#context_reloadTab:not([hidden])
+):has(#context_zen-add-essential:not([hidden])
+):has(#context_pinTab:not([hidden])) {
+  :nth-child(1 of menuseparator){
+    display: flex !important;
+    visibility: visible !important;
+    order: -1 !important;
+  }
+  
+  #context_openANewTab,
+  #context_reloadTab,
+  #context_zen-add-essential,
+  #context_pinTab {
+    order: -999 !important;
+    --_height: 40px;
+    width: 25% !important;
+    height: var(--_height) !important;
+    background-position: center !important;
+    .menu-text{display: none !important;}
+  }
+  #context_reloadTab{
+    margin-left: 25% !important;
+    margin-top: calc(0px - var(--_height)) !important;
+  }
+  #context_zen-add-essential{
+    margin-left: 50% !important;
+    margin-top: calc(0px - var(--_height)) !important;
+  }
+  #context_pinTab{
+    margin-left: 75% !important;
+    margin-top: calc(0px - var(--_height)) !important;
+  }
+}

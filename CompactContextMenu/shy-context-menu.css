@@ -35,13 +35,13 @@ menupopup > :is(menuitem, menu){
  * tab menu 
  */
 #tabContextMenu {
-  :nth-child(1 of menuseparator){
+  &>:nth-child(1 of menuseparator){
     display: flex !important;
     visibility: visible !important;
     order: -1 !important;
   }
   
-  :nth-child(-n+5 of menuitem:not([hidden])){
+  &>:nth-child(-n+5 of menuitem:not([hidden])){
     order: -999 !important;
     --_height: 40px;
     width: 20% !important;
@@ -52,8 +52,8 @@ menupopup > :is(menuitem, menu){
     &:not(:nth-child(1 of menuitem:not([hidden])))
     {margin-top: calc(0px - var(--_height)) !important;}
   }
-  :nth-child(2 of menuitem:not([hidden])){margin-left: 20% !important;}
-  :nth-child(3 of menuitem:not([hidden])){margin-left: 40% !important;}
-  :nth-child(4 of menuitem:not([hidden])){margin-left: 60% !important;}
-  :nth-child(5 of menuitem:not([hidden])){margin-left: 80% !important;}
+  &>:nth-child(2 of menuitem:not([hidden])){margin-left: 20% !important;}
+  &>:nth-child(3 of menuitem:not([hidden])){margin-left: 40% !important;}
+  &>:nth-child(4 of menuitem:not([hidden])){margin-left: 60% !important;}
+  &>:nth-child(5 of menuitem:not([hidden])){margin-left: 80% !important;}
 }

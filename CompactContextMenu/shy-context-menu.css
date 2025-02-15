@@ -33,7 +33,7 @@ menupopup > :is(menuitem, menu){
 
 /*------------------------------------
  * tab menu 
- */
+ *
 #tabContextMenu {
   &>:nth-child(1 of menuseparator){
     display: flex !important;
@@ -42,15 +42,15 @@ menupopup > :is(menuitem, menu){
   }
   
   &>:nth-child(-n+5 of menuitem:not([hidden])){
-    order: -999 !important;
-    --_height: 40px;
+    order: -100 !important;
+    --_hgt: 40px;
     width: 20% !important;
-    height: var(--_height) !important;
+    height: var(--_hgt) !important;
     background-position: center !important;
     .menu-text{display: none !important;}
     
     &:not(:nth-child(1 of menuitem:not([hidden])))
-    {margin-top: calc(0px - var(--_height)) !important;}
+    {margin-top: calc(0px - var(--_hgt)) !important;}
   }
   &>:nth-child(2 of menuitem:not([hidden])){margin-left: 20% !important;}
   &>:nth-child(3 of menuitem:not([hidden])){margin-left: 40% !important;}

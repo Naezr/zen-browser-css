@@ -78,12 +78,25 @@
 /*------------------------------------
  * notification dot on tab position fix
  */
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) 
+.tabbrowser-tab:not([zen-essential]) > .tab-stack > .tab-content[titlechanged]:not([selected]),
 .tabbrowser-tab:not([zen-essential]):is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected]),
-.tabbrowser-tab:not([zen-essential]) > .tab-stack > .tab-content[pinned][titlechanged]:not([selected]),
-#tabbrowser-tabs[orient="vertical"]:not([expanded])
-.tabbrowser-tab:not([zen-essential]) > .tab-stack > .tab-content[titlechanged]:not([selected]) {
-  background-position: 19px 30px !important;
-  background-position-y: bottom 6.5px;
+.tabbrowser-tab:not([zen-essential]) > .tab-stack > .tab-content[pinned][titlechanged]:not([selected]) {
+  background: none !important;
+  .tab-icon-stack::after{
+    content: '';
+    z-index: 10;
+    position: absolute;
+    top: 7px;
+    width: 16px; 
+    height: 16px;
+    margin-inline-end: var(--toolbarbutton-inner-padding);
+    margin-inline-start: calc(var(--toolbarbutton-inner-padding) / 4);
+    background-image: radial-gradient(circle, var(--attention-dot-color), var(--attention-dot-color) 2px, transparent 2px);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 4px 4px;
+  }
 }
 
 /*------------------------------------
